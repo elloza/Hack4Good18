@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="__local_jars__:/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/build/java/vuforia/Vuforia.jar:unspecified@jar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../build/java/vuforia/Vuforia.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

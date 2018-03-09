@@ -35,6 +35,8 @@ import com.vuforia.DataSet;
 import com.vuforia.ObjectTracker;
 import com.vuforia.State;
 import com.vuforia.STORAGE_TYPE;
+import com.vuforia.Trackable;
+import com.vuforia.TrackableResult;
 import com.vuforia.Tracker;
 import com.vuforia.TrackerManager;
 import com.vuforia.Vuforia;
@@ -290,7 +292,7 @@ public class ModelTargets extends Activity implements SampleApplicationControl,
         if (mDataset == null)
             return false;
         
-        if (!mDataset.load("VuforiaMars_ModelTarget.xml",
+        if (!mDataset.load("Museum.xml",
             STORAGE_TYPE.STORAGE_APPRESOURCE))
             return false;
 
@@ -421,7 +423,15 @@ public class ModelTargets extends Activity implements SampleApplicationControl,
     
     @Override
     public void onVuforiaUpdate(State state)
-    {}
+    {
+        if (state.getNumTrackableResults() != 0){
+            for (int tIdx = 0; tIdx < state.getNumTrackableResults(); tIdx++) {
+                TrackableResult result = state.getTrackableResult(tIdx);
+                Trackable trackable = result.getTrackable();
+                Log.d("IÑAKI", trackable.getName() +"");
+            }
+        }
+    }
     
     
     @Override

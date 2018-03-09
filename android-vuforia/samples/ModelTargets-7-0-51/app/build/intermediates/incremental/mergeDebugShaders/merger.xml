@@ -1,2 +1,2 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main"><source path="/Users/inakitajesreiris/Desktop/vuforia-sdk-android-7-0-50/samples/ModelTargets-7-0-51/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/inakitajesreiris/Desktop/vuforia-sdk-android-7-0-50/samples/ModelTargets-7-0-51/app/src/debug/shaders"/></dataSet></merger>
+<merger version="3"><dataSet config="main"><source path="/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/src/main/shaders"/></dataSet><dataSet config="debug"><source path="/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/src/debug/shaders"/></dataSet></merger>

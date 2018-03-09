@@ -3,12 +3,12 @@
 
     <item
         is-multidex="false"
-        jar="/Users/inakitajesreiris/Desktop/vuforia-sdk-android-7-0-50/build/java/vuforia/Vuforia.jar"
+        jar="/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/build/java/vuforia/Vuforia.jar"
         jumboMode="false"
         optimize="true"
         revision="25.0.3"
         sha1="8fad278a44e32a4c9166830e21a41b386819184b">
-        <dex dex="/Users/inakitajesreiris/Desktop/vuforia-sdk-android-7-0-50/samples/ModelTargets-7-0-51/app/build/intermediates/pre-dexed/debug/Vuforia_fd9d174821b6b2e6818bd497d782b4c9bcf47c6c.jar" />
+        <dex dex="/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/build/intermediates/pre-dexed/debug/Vuforia_1df4aafd49581c3b0d281ebf20803cb24ed21bfe.jar" />
     </item>
 
 </items>
