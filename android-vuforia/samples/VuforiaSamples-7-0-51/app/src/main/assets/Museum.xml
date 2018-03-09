@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="charity" size="0.100000 0.133300" />
+    <ImageTarget name="iluminacion" size="100.000000 100.000000" />
+    <ImageTarget name="jardineria" size="200.000000 181.666672" />
+    <ImageTarget name="servicios" size="200.000000 282.485870" />
+    <ImageTarget name="mueble" size="100.000000 100.000000" />
+    <ImageTarget name="bombilla" size="507.000000 490.393066" />
+    <ImageTarget name="carpeta" size="0.150000 0.200000" />
+  </Tracking>
+</QCARConfig>
