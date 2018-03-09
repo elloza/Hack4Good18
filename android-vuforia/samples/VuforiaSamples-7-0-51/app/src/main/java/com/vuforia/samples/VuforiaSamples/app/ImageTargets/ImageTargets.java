@@ -11,11 +11,13 @@ countries.
 package com.vuforia.samples.VuforiaSamples.app.ImageTargets;
 
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Vector;
 
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -24,6 +26,8 @@ import android.hardware.Camera.CameraInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.SystemClock;
+import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -32,6 +36,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.CheckBox;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.vuforia.CameraDevice;
@@ -40,6 +45,7 @@ import com.vuforia.ObjectTracker;
 import com.vuforia.State;
 import com.vuforia.STORAGE_TYPE;
 import com.vuforia.Trackable;
+import com.vuforia.TrackableResult;
 import com.vuforia.Tracker;
 import com.vuforia.TrackerManager;
 import com.vuforia.Vuforia;
@@ -56,10 +62,13 @@ import com.vuforia.samples.VuforiaSamples.ui.SampleAppMenu.SampleAppMenuInterfac
 
 
 public class ImageTargets extends Activity implements SampleApplicationControl,
-    SampleAppMenuInterface
+    SampleAppMenuInterface, TextToSpeech.OnInitListener
 {
+    private static final long MIN_TIME_LAPSE_IN_MILLIS = 2000L;
+    private long last_timestamp = 0;
     private static final String LOGTAG = "ImageTargets";
-    
+    private String lastDetection = null;
+
     SampleApplicationSession vuforiaAppSession;
     
     private DataSet mCurrentDataset;
@@ -110,9 +119,8 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
         vuforiaAppSession = new SampleApplicationSession(this);
         
         startLoadingAnimation();
-        mDatasetStrings.add("StonesAndChips.xml");
-        mDatasetStrings.add("Tarmac.xml");
-        
+        mDatasetStrings.add("Museum.xml");
+
         vuforiaAppSession
             .initAR(this, ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         
@@ -121,12 +129,43 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
         // Load any sample specific textures:
         mTextures = new Vector<Texture>();
         loadTextures();
-        
+
+        mTts = new TextToSpeech(this, this);
+
+
         mIsDroidDevice = android.os.Build.MODEL.toLowerCase().startsWith(
             "droid");
-        
+
+
     }
-    
+
+    @Override
+    public void onInit(int status) {
+
+        // status can be either TextToSpeech.SUCCESS or TextToSpeech.ERROR
+        if (status == TextToSpeech.SUCCESS) {
+            // Set preferred language to US english.
+            // Note that a language may not be available, and the result will indicate this.
+            Locale loc = new Locale ("spa", "ESP");
+            int result = mTts.setLanguage(loc);
+
+            if (result == TextToSpeech.LANG_MISSING_DATA ||
+                    result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                // Lanuage data is missing or the language is not supported.
+                Log.e("404","Language is not available.");
+            }
+        } else {
+            // Initialization failed.
+            Log.e("404", "Could not initialize TextToSpeech.");
+            // May be its not installed so we prompt it to be installed
+            Intent installIntent = new Intent();
+            installIntent.setAction(
+                    TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
+            startActivity(installIntent);
+        }
+
+    }
+
     // Process Single Tap event to trigger autofocus
     private class GestureListener extends
         GestureDetector.SimpleOnGestureListener
@@ -253,6 +292,11 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
     @Override
     protected void onDestroy()
     {
+
+        if (mTts != null) {
+            mTts.stop();
+            mTts.shutdown();
+        }
         Log.d(LOGTAG, "onDestroy");
         super.onDestroy();
         
@@ -308,7 +352,6 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
         // Adds the inflated layout to the view
         addContentView(mUILayout, new LayoutParams(LayoutParams.MATCH_PARENT,
             LayoutParams.MATCH_PARENT));
-        
     }
     
     
@@ -523,6 +566,25 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
     @Override
     public void onVuforiaUpdate(State state)
     {
+
+        if (state.getNumTrackableResults() != 0){
+            for (int tIdx = 0; tIdx < state.getNumTrackableResults(); tIdx++) {
+                TrackableResult result = state.getTrackableResult(tIdx);
+                Trackable trackable = result.getTrackable();
+
+                long elapsedTime = (SystemClock.elapsedRealtime()-last_timestamp);
+                if (lastDetection == null && elapsedTime > MIN_TIME_LAPSE_IN_MILLIS ){
+                    Log.d("IÑAKI", trackable.getName() + " detected");
+                    lastDetection = trackable.getName();
+                    textToSpeechProduct(trackable.getName());
+                    last_timestamp = SystemClock.elapsedRealtime();
+                }
+
+            }
+        } else {
+            lastDetection = null;
+        }
+
         if (mSwitchDatasetAsap)
         {
             mSwitchDatasetAsap = false;
@@ -539,6 +601,20 @@ public class ImageTargets extends Activity implements SampleApplicationControl,
             doUnloadTrackersData();
             doLoadTrackersData();
         }
+    }
+
+    private TextToSpeech mTts;
+
+    private void textToSpeechProduct(String productName){
+        mTts.speak(productName, TextToSpeech.QUEUE_FLUSH, null);
+    }
+
+    private void addProductView(String productName){
+        RelativeLayout card = (RelativeLayout) View.inflate(this, R.layout.card,
+                null);
+        TextView tvProductName = (TextView) card.findViewById(R.id.text_type);
+        tvProductName.setText(productName);
+        mUILayout.addView(card);
     }
     
     

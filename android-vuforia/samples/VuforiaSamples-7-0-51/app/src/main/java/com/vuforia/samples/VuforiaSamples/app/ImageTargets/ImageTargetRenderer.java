@@ -189,7 +189,7 @@ public class ImageTargetRenderer implements GLSurfaceView.Renderer, SampleAppRen
     {
         // Renders video background replacing Renderer.DrawVideoBackground()
         mSampleAppRenderer.renderVideoBackground();
-
+        /*
         GLES20.glEnable(GLES20.GL_DEPTH_TEST);
 
         // handle face culling, we need to detect if we are using reflection
@@ -282,7 +282,7 @@ public class ImageTargetRenderer implements GLSurfaceView.Renderer, SampleAppRen
 
         }
 
-        GLES20.glDisable(GLES20.GL_DEPTH_TEST);
+        GLES20.glDisable(GLES20.GL_DEPTH_TEST);*/
 
     }
 
