@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">NfcIO</string>
+    <string name="btn_write">Escribir en tarjeta</string>
+    <string name="btn_read">Leer tarjeta</string>
+    <string name="message_tag_detected">Tarjeta detectada</string>
+    <string name="message_write_tag">Escribir en tarjeta</string>
+    <string name="message_tap_tag">Tap the NFC Tag to your device !</string>
+    <string name="message_write_progress">Escribiendo en tarjeta</string>
+    <string name="message_write_success">Escrito en tarjeta con éxito</string>
+    <string name="message_write_error">Error escribiendo en tarjeta</string>
+    <string name="message_read_tag">Leer de tarjeta</string>
+    <string name="title_activity_color_detector">ColorDetectorActivity</string>
+</resources>
+
