@@ -10,8 +10,8 @@ Reto Leroy Merlin Salamanca:
 
 ## Funcionalidades propuestas:
 
-[ ] Guiado en interiores del Leroy Merlin para personas invidentes
-[ ] Reconocimiento de objetos mediante NFC
-[ ] Mejoras de UX en la aplicación actual de Leroy Merlin
+- [ ] Guiado en interiores del Leroy Merlin para personas invidentes
+- [ ] Reconocimiento de objetos mediante NFC
+- [ ] Mejoras de UX en la aplicación actual de Leroy Merlin
 
 
