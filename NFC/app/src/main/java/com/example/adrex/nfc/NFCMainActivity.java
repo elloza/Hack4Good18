@@ -5,99 +5,62 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.nfc.NfcAdapter;
 import android.nfc.Tag;
-import android.nfc.tech.NfcV;
+import android.speech.tts.TextToSpeech;
+import android.support.design.widget.Snackbar;
+import android.support.v4.widget.ImageViewCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
+import android.widget.ImageView;
 
-public class NFCMainActivity extends AppCompatActivity implements Listener {
+import java.util.HashMap;
+import java.util.Locale;
+
+public class NFCMainActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
 
     public static final String TAG = NFCMainActivity.class.getSimpleName();
 
-
-    private EditText editMessage;
-    private Button btnWrite;
-    private Button btnRead;
-    private Button btnCamera;
-
-    private NFCWriteFragment mNfcWriteFragment;
-    private NFCReadFragment mNfcReadFragment;
-
-    private boolean isDialogDisplayed = false;
-    private boolean isWrite = false;
-
+    private ImageView mImageView;
     private NfcAdapter mNfcAdapter;
-
+    private TextToSpeech mTts;
+    private HashMap<Integer,String> records;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nfcmain);
-        initViews();
+        mImageView = findViewById(R.id.logo);
+        mImageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClickLogo();
+            }
+        });
+        mTts = new TextToSpeech(this, this);
         initNfc();
-    }
-
-    private void initViews(){
-        editMessage = findViewById(R.id.edit_message);
-        btnWrite = findViewById(R.id.btn_write);
-        btnRead = findViewById(R.id.btn_read);
-
-        btnWrite.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showWriteFragment();
-            }
-        });
-        btnRead.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showReadFragment();
-            }
-        });
+        initHash();
     }
 
     private void initNfc(){
         mNfcAdapter = NfcAdapter.getDefaultAdapter(this);
-    }
-
-    private void showWriteFragment() {
-
-        isWrite = true;
-
-        mNfcWriteFragment = (NFCWriteFragment) getFragmentManager().findFragmentByTag(NFCWriteFragment.TAG);
-
-        if (mNfcWriteFragment == null) {
-
-            mNfcWriteFragment = NFCWriteFragment.newInstance();
+        if(mNfcAdapter == null || !mNfcAdapter.isEnabled()){
+            Snackbar.make(findViewById(R.id.main_layout),R.string.message_nfc_disabled, Snackbar.LENGTH_LONG).show();
+            textToSpeechProduct("NFC desactivado");
         }
-        mNfcWriteFragment.show(getFragmentManager(),NFCWriteFragment.TAG);
-
     }
 
-    private void showReadFragment() {
-
-        mNfcReadFragment = (NFCReadFragment) getFragmentManager().findFragmentByTag(NFCReadFragment.TAG);
-
-        if (mNfcReadFragment == null) {
-
-            mNfcReadFragment = NFCReadFragment.newInstance();
-        }
-        mNfcReadFragment.show(getFragmentManager(),NFCReadFragment.TAG);
-
+    private void onClickLogo(){
+        textToSpeechProduct("¡Leroy for all!");
     }
 
-    @Override
-    public void onDialogDisplayed() {
-        isDialogDisplayed = true;
-    }
-
-    @Override
-    public void onDialogDimissed() {
-        isDialogDisplayed = false;
-        isWrite = false;
+    private void initHash(){
+        records = new HashMap<>();
+        records.put(100,"Martillo, 17.2 euros");
+        records.put(-20,"Mesa, 200 euros");
+        records.put(37,"Alicate, 10 euros");
+        records.put(-108,"Mesa de noche, 90 euros");
+        records.put(-60,"Bañera, 450 euros");
+        records.put(0,"Un bloste, que ¿qué es un bloste?");
     }
 
     @Override
@@ -126,27 +89,37 @@ public class NFCMainActivity extends AppCompatActivity implements Listener {
         super.onNewIntent(intent);
         Tag tag = intent.getParcelableExtra(NfcAdapter.EXTRA_TAG);
 
-        Log.d(TAG, "onNewIntent: "+intent.getAction());
-
-        if(tag != null) {
-            Toast.makeText(this, getString(R.string.message_tag_detected), Toast.LENGTH_SHORT).show();
-            //Ndef ndef = Ndef.get(tag);
-            NfcV ndef = NfcV.get(tag);
-            if (isDialogDisplayed) {
-
-                if (isWrite) {
-
-                    String messageToWrite = editMessage.getText().toString();
-                    mNfcWriteFragment = (NFCWriteFragment) getFragmentManager().findFragmentByTag(NFCWriteFragment.TAG);
-                    mNfcWriteFragment.onNfcDetected(ndef,messageToWrite);
-
-                } else {
-
-                    mNfcReadFragment = (NFCReadFragment)getFragmentManager().findFragmentByTag(NFCReadFragment.TAG);
-                    mNfcReadFragment.onNfcDetected(ndef);
-                }
+        if(tag != null){
+            int uid = tag.getId()[0];
+            Log.e("TAG", ""+uid);
+            if(records.get(uid)!= null){
+                textToSpeechProduct(records.get(uid));
+            }else{
+                textToSpeechProduct(records.get(0));
             }
         }
     }
 
+    private void textToSpeechProduct(String productName){
+        mTts.speak(productName, TextToSpeech.QUEUE_FLUSH, null);
+    }
+
+    @Override
+    public void onInit(int status) {
+        if (status == TextToSpeech.SUCCESS) {
+            Locale loc = new Locale ("spa", "ESP");
+            int result = mTts.setLanguage(loc);
+
+            if (result == TextToSpeech.LANG_MISSING_DATA ||
+                    result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                Log.e("404","Language is not available.");
+            }
+        } else {
+            Log.e("404", "Could not initialize TextToSpeech.");
+            Intent installIntent = new Intent();
+            installIntent.setAction(
+                    TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
+            startActivity(installIntent);
+        }
+    }
 }

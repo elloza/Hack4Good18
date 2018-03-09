@@ -5,26 +5,13 @@ xmlns:app="http://schemas.android.com/apk/res-auto"
 xmlns:tools="http://schemas.android.com/tools"
 android:layout_width="match_parent"
 android:layout_height="match_parent"
-tools:context="com.example.adrex.nfc.NFCMainActivity">
+tools:context="com.example.adrex.nfc.NFCMainActivity"
+    android:id="@+id/main_layout">
 
-<android.support.v7.widget.AppCompatEditText
-    android:id="@+id/edit_message"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:hint="Mensaje"/>
-
-<Button
-    android:layout_below="@+id/edit_message"
-    android:id="@+id/btn_write"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/btn_write"/>
-<Button
-    android:layout_below="@+id/btn_write"
-    android:id="@+id/btn_read"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/btn_read"/>
-
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/l4a"/>
 
 </RelativeLayout>
