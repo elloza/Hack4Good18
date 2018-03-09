@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
+    <ImageTarget name="hack_for_good" size="2.000000 0.476000" />
+    <ImageTarget name="IMG_0940" size="2.000000 2.666000" />
+    <ImageTarget name="Noche_Estrellada_de_Van_Gogh" size="474.000000 248.222839" />
+    <ImageTarget name="cocacola" size="0.900000 0.353700" />
+    <ImageTarget name="La_Gioconda_de_DaVinci" size="507.000000 769.589661" />
+    <ImageTarget name="Las_Meninas_de_Velazquez" size="507.000000 568.027771" />
+    <ImageTarget name="El_Grito_de_Munch" size="507.000000 666.223145" />
+    <ImageTarget name="mueble_de_bano_zeus_399_euros" size="200.000000 200.000000" />
+    <ImageTarget name="impresora_3D_LEGIO_549_euros" size="50.000000 50.000000" />
+    <ImageTarget name="lampara_Romlux_Julieta_Tiffany_230_euros" size="20.000000 20.000000" />
+    <ImageTarget name="seccion_de_muebles" size="100.000000 100.000000" />
+    <ImageTarget name="seccion_de_jardineria" size="200.000000 181.666672" />
+    <ImageTarget name="seccion_de_iluminacion" size="100.000000 100.000000" />
+    <ImageTarget name="Seccion_de_servicios" size="200.000000 282.485870" />
+    <ImageTarget name="Motosierra_de_gasolina_Sterwins_99_euros" size="200.000000 200.000000" />
     <ImageTarget name="charity" size="0.100000 0.133300" />
-    <ImageTarget name="iluminacion" size="100.000000 100.000000" />
-    <ImageTarget name="jardineria" size="200.000000 181.666672" />
-    <ImageTarget name="servicios" size="200.000000 282.485870" />
-    <ImageTarget name="mueble" size="100.000000 100.000000" />
-    <ImageTarget name="bombilla" size="507.000000 490.393066" />
     <ImageTarget name="carpeta" size="0.150000 0.200000" />
   </Tracking>
 </QCARConfig>

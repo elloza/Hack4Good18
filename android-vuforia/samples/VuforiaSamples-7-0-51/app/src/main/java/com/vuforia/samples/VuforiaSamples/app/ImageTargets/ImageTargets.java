@@ -64,8 +64,6 @@ public class ImageTargets extends Activity implements SampleApplicationControl, 
     
     private DataSet mCurrentDataset;
     private int mCurrentDatasetSelectionIndex = 0;
-    private int mStartDatasetsIndex = 0;
-    private int mDatasetsNumber = 0;
     private ArrayList<String> mDatasetStrings = new ArrayList<String>();
     
     // Our OpenGL view:
@@ -84,8 +82,6 @@ public class ImageTargets extends Activity implements SampleApplicationControl, 
     private boolean mContAutofocus = true;
     private boolean mExtendedTracking = false;
 
-    private View mFocusOptionView;
-    private View mFlashOptionView;
     
     private RelativeLayout mUILayout;
     
@@ -575,7 +571,10 @@ public class ImageTargets extends Activity implements SampleApplicationControl, 
     private TextToSpeech mTts;
 
     private void textToSpeechProduct(String productName){
-        mTts.speak(productName, TextToSpeech.QUEUE_FLUSH, null);
+
+        String formattedString = productName.replace("_"," ");
+
+        mTts.speak(formattedString, TextToSpeech.QUEUE_FLUSH, null);
     }
 
     
