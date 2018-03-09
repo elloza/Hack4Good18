@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Fri Mar 09 17:37:46 CET 2018
+#Fri Mar 09 18:25:30 CET 2018
 5.base=/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/VuforiaSamples-7-0-51/app/build/intermediates/assets/debug
 42.base=/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/VuforiaSamples-7-0-51/app/build/intermediates/assets/debug
 32.set=ANDROID_RESOURCE
