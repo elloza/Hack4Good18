@@ -4,24 +4,16 @@
         "source": "/Users/inakitajesreiris/Desktop/vuforia-sdk-android-7-0-50/samples/ModelTargets-7-0-51/app/src/main/res/drawable/reset_icon.png"
     },
     {
-        "merged": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/selector_button_reset.xml",
-        "source": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/src/main/res/drawable/selector_button_reset.xml"
-    },
-    {
-        "merged": "/Users/inakitajesreiris/Desktop/vuforia-sdk-android-7-0-50/samples/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/vuforia_splash.png",
-        "source": "/Users/inakitajesreiris/Desktop/vuforia-sdk-android-7-0-50/samples/ModelTargets-7-0-51/app/src/main/res/drawable/vuforia_splash.png"
-    },
-    {
-        "merged": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/bg70.png",
-        "source": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/src/main/res/drawable/bg70.png"
-    },
-    {
         "merged": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/selector_button_start.xml",
         "source": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/src/main/res/drawable/selector_button_start.xml"
     },
     {
         "merged": "/Users/inakitajesreiris/Desktop/vuforia-sdk-android-7-0-50/samples/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/icon.png",
         "source": "/Users/inakitajesreiris/Desktop/vuforia-sdk-android-7-0-50/samples/ModelTargets-7-0-51/app/src/main/res/drawable/icon.png"
+    },
+    {
+        "merged": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/bg00.png",
+        "source": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/src/main/res/drawable/bg00.png"
     },
     {
         "merged": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/background_button_reset_pressed.xml",
@@ -32,12 +24,56 @@
         "source": "/Users/inakitajesreiris/Desktop/vuforia-sdk-android-7-0-50/samples/ModelTargets-7-0-51/app/src/main/res/drawable/bg70.png"
     },
     {
-        "merged": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/logo.png",
-        "source": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/src/main/res/drawable/logo.png"
-    },
-    {
         "merged": "/Users/inakitajesreiris/Desktop/vuforia-sdk-android-7-0-50/samples/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/background_button_reset_pressed.xml",
         "source": "/Users/inakitajesreiris/Desktop/vuforia-sdk-android-7-0-50/samples/ModelTargets-7-0-51/app/src/main/res/drawable/background_button_reset_pressed.xml"
+    },
+    {
+        "merged": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/background_button_reset_pressed.xml",
+        "source": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/src/main/res/drawable/background_button_reset_pressed.xml"
+    },
+    {
+        "merged": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/background_button_reset_normal.xml",
+        "source": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/src/main/res/drawable/background_button_reset_normal.xml"
+    },
+    {
+        "merged": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/reset_icon.png",
+        "source": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/src/main/res/drawable/reset_icon.png"
+    },
+    {
+        "merged": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/selector_button_start.xml",
+        "source": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/src/main/res/drawable/selector_button_start.xml"
+    },
+    {
+        "merged": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/selector_button_reset.xml",
+        "source": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/src/main/res/drawable/selector_button_reset.xml"
+    },
+    {
+        "merged": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/bg00.png",
+        "source": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/src/main/res/drawable/bg00.png"
+    },
+    {
+        "merged": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/background_button_reset_normal.xml",
+        "source": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/src/main/res/drawable/background_button_reset_normal.xml"
+    },
+    {
+        "merged": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/selector_button_reset.xml",
+        "source": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/src/main/res/drawable/selector_button_reset.xml"
+    },
+    {
+        "merged": "/Users/inakitajesreiris/Desktop/vuforia-sdk-android-7-0-50/samples/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/vuforia_splash.png",
+        "source": "/Users/inakitajesreiris/Desktop/vuforia-sdk-android-7-0-50/samples/ModelTargets-7-0-51/app/src/main/res/drawable/vuforia_splash.png"
+    },
+    {
+        "merged": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/logo.png",
+        "source": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/src/main/res/drawable/logo.png"
+    },
+    {
+        "merged": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/bg70.png",
+        "source": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/src/main/res/drawable/bg70.png"
+    },
+    {
+        "merged": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/logo.png",
+        "source": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/src/main/res/drawable/logo.png"
     },
     {
         "merged": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/vuforia_splash.png",
@@ -56,6 +92,14 @@
         "source": "/Users/inakitajesreiris/Desktop/vuforia-sdk-android-7-0-50/samples/ModelTargets-7-0-51/app/src/main/res/drawable/selector_button_start.xml"
     },
     {
+        "merged": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/icon.png",
+        "source": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/src/main/res/drawable/icon.png"
+    },
+    {
+        "merged": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/vuforia_splash.png",
+        "source": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/src/main/res/drawable/vuforia_splash.png"
+    },
+    {
         "merged": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/icon.png",
         "source": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/src/main/res/drawable/icon.png"
     },
@@ -72,11 +116,7 @@
         "source": "/Users/inakitajesreiris/Desktop/vuforia-sdk-android-7-0-50/samples/ModelTargets-7-0-51/app/src/main/res/drawable/background_button_reset_normal.xml"
     },
     {
-        "merged": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/bg00.png",
-        "source": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/src/main/res/drawable/bg00.png"
-    },
-    {
-        "merged": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/background_button_reset_normal.xml",
-        "source": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/src/main/res/drawable/background_button_reset_normal.xml"
+        "merged": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable/bg70.png",
+        "source": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/src/main/res/drawable/bg70.png"
     }
 ]

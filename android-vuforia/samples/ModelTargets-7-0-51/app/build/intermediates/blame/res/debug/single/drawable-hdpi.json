@@ -4,8 +4,16 @@
         "source": "/Users/inakitajesreiris/Desktop/vuforia-sdk-android-7-0-50/samples/ModelTargets-7-0-51/app/src/main/res/drawable-hdpi/icon.png"
     },
     {
+        "merged": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable-hdpi/logo.png",
+        "source": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/src/main/res/drawable-hdpi/logo.png"
+    },
+    {
         "merged": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable-hdpi/logo.png",
         "source": "/Users/inakitajesreiris/Downloads/vuforia-samples-core-android-7-0-51/ModelTargets-7-0-51/app/src/main/res/drawable-hdpi/logo.png"
+    },
+    {
+        "merged": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable-hdpi/icon.png",
+        "source": "/Users/inakitajesreiris/Desktop/Hack4Good18/android-vuforia/samples/ModelTargets-7-0-51/app/src/main/res/drawable-hdpi/icon.png"
     },
     {
         "merged": "/Users/inakitajesreiris/Desktop/vuforia-sdk-android-7-0-50/samples/ModelTargets-7-0-51/app/build/intermediates/res/merged/debug/drawable-hdpi/logo.png",
